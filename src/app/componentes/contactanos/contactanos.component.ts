@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { RegistroService } from '../../servicios/registro/registro.service';
 
 @Component({
   selector: 'app-contactanos',
@@ -9,22 +10,27 @@ import { FormBuilder } from '@angular/forms';
 export class ContactanosComponent {
   formularioForm;
   datos_formulario: any;
-  constructor(private formBuild: FormBuilder){
+  constructor(private formBuild: FormBuilder, private SolicitudesContactosSrv: RegistroService){
     this.formularioForm = this.formBuild.group({
       nombre: '',
       apellido: '',
-      email: '',
-      tlfo: '',
+      correo: '',
+      telefono: '',
       mensaje: ''
     });
   }
-  ngOnInit(){
-    //console.log("Hola");
-    //console.log(this.formularioForm);
-  }
   enviarDatos(){
-    console.log("Enviar datos")
     this.datos_formulario = this.formularioForm.value;
-    console.log(this.formularioForm.value);
+    this.SolicitudesContactosSrv.registrarFormulario(this.datos_formulario).subscribe(
+      (response:any) => {
+        if(response.solicitud_formulario){
+          alert("Datos duardados correctamente")
+          console.log(response.solicitud_formulario);
+          this.formularioForm.reset
+        }
+      },error => {
+        console.log(error)
+      }
+    )
   }
 }

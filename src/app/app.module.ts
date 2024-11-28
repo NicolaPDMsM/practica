@@ -8,6 +8,9 @@ import { UbicanosComponent } from './componentes/ubicanos/ubicanos.component';
 import { ContactanosComponent } from './componentes/contactanos/contactanos.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { SolicitudesContactosComponent } from './componentes/solicitudes-contactos/solicitudes-contactos.component';
+
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     InicioComponent,
     UbicanosComponent,
     ContactanosComponent,
-    FooterComponent
+    FooterComponent,
+    SolicitudesContactosComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +28,8 @@ import { FooterComponent } from './componentes/footer/footer.component';
     ReactiveFormsModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    provideHttpClient()
   ],
   bootstrap: [AppComponent]
 })

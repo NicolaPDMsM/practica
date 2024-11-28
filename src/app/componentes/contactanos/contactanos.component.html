@@ -30,11 +30,11 @@
                         </div>
                         <div class="mb-3">
                             <label for="gmail" class="form-label">Email</label>
-                            <input type="email" id="gmail" class="form-control" formControlName="email">
+                            <input type="email" id="gmail" class="form-control" formControlName="correo">
                         </div>
                         <div class="mb-3">
                             <label for="tlfo" class="form-label">Teléfono</label>
-                            <input type="number" id="tlfo" class="form-control" formControlName="tlfo">
+                            <input type="number" id="tlfo" class="form-control" formControlName="telefono">
                         </div>
                         <div class="mb-3">
                             <label for="mensaje" class="form-label">Mensaje</label>
@@ -46,7 +46,7 @@
                 <div class="card mt-4 pb-3" *ngIf="datos_formulario != null">
                     <div class="card-body">
                         <p class="card-text h4 b text-primary">
-                            <strong>{{datos_formulario.nombre}} {{datos_formulario.apellido}}, su mensaje fue enviado correctamente</strong>
+                            <strong>Gracias {{datos_formulario.nombre}} {{datos_formulario.apellido}} por contactarse con nosotros</strong>
                         </p>
                     </div>
                 </div>
