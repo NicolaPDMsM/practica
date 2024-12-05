@@ -1,3 +1,20 @@
 .letra {
     font-family: 'Comic Sans MS', sans-serif;
 }
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+app-barra-nav {
+    flex-shrink: 0;
+}
+.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+app-footer {
+    flex-shrink: 0;
+}

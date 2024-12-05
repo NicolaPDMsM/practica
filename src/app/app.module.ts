@@ -11,6 +11,9 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { SolicitudesContactosComponent } from './componentes/solicitudes-contactos/solicitudes-contactos.component';
 
 import { provideHttpClient } from '@angular/common/http';
+import { InformacionProfesionalesComponent } from './componentes/informacion-profesionales/informacion-profesionales.component';
+import { BarraNavComponent } from './componentes/barra-nav/barra-nav.component';
+import { CrearProfesionalComponent } from './componentes/crear-profesional/crear-profesional.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { provideHttpClient } from '@angular/common/http';
     UbicanosComponent,
     ContactanosComponent,
     FooterComponent,
-    SolicitudesContactosComponent
+    SolicitudesContactosComponent,
+    InformacionProfesionalesComponent,
+    BarraNavComponent,
+    CrearProfesionalComponent
   ],
   imports: [
     BrowserModule,

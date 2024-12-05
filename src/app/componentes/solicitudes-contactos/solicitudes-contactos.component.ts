@@ -9,13 +9,12 @@ import { RegistroService } from '../../servicios/registro/registro.service';
 export class SolicitudesContactosComponent {
   solicitudes_recibidas: any;
   constructor( private SolicitudesContactosSrv: RegistroService){}
-
   ngOnInit(){
     //console.log("Hola");
     //console.log(this.formularioForm);
     this.obtenerTodasSolicitudes();
   }
-
+  
   obtenerTodasSolicitudes(){
     this.SolicitudesContactosSrv.obtenerTodasSolicitudes().subscribe(
       (response:any) => {
